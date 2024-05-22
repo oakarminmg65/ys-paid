@@ -16,25 +16,6 @@ from concurrent.futures import ThreadPoolExecutor
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 #─━─━─━─━Find User Agent─━──━─━#
 
-print("Loading...")
-url = "https://raw.githubusercontent.com/oakarminmg65/Fb-clone-paid-tool/main/ApprovedUsers.txt"
-response = requests.get(url)
-approved_users = response.text
-
-user_id = str(os.geteuid())
-user_name = getpass.getuser()
-key = user_id + user_name
-
-if key in approved_users:
-    print("\nYour key: " + key)
-    print("Your key is approved")
-    # time.sleep(2)
-else:
-    print("\nYour key: " + key)
-    print("Your key is not approved")
-    print(approval_description)
-    sys.exit()
-
 def ymfindua():
     application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
     application_version_code=str(random.randint(000000000,999999999))
@@ -86,16 +67,17 @@ try:os.mkdir('/sdcard/YousuF')
 except:pass
 cl = random.choice([f'\033[1;91m','\033[1;92m','\033[1;94m','\033[1;95m','\033[1;96m','\033[1;97m','\033[1;90m'])
 logo = (f"""\033[92;1m 
-██████  ███████ ██   ██               ██    ██ 
-██   ██ ██       ██ ██                 ██  ██  
-██████  █████     ███       █████       ████   
-██   ██ ██       ██ ██                   ██    
-██   ██ ███████ ██   ██                  ██    
+\033[38;5;82m██╗    ██╗████████╗██╗  ██╗██████╗ ██████╗ 
+\033[38;5;83m██║    ██║╚══██╔══╝██║  ██║██╔══██╗╚════██╗
+\033[38;5;84m██║ █╗ ██║   ██║   ███████║██████╔╝ █████╔╝
+\033[38;5;85m██║███╗██║   ██║   ╚════██║██╔═══╝ ██╔═══╝ 
+\033[38;5;86m╚███╔███╔╝   ██║        ██║██║     ███████╗
+\033[1;87m ╚══╝╚══╝    ╚═╝        ╚═╝╚═╝     ╚══════╝    
 \033[1;37m==============================================
 \033[92;1m(>  \033[1;37mOwner         \033[1;32m :    \033[1;91mY \033[1;33mO \033[92;1mU \033[1;34mS \033[1;35mU \033[1;37mF
-\033[92;1m(>  \033[1;37mFacebook      \033[1;32m :\033[1;97m   ARAFAT HOSSAIN 
-\033[92;1m(>  \033[1;37mGithub        \033[1;32m : \033[1;97m  YOUSUF-NIZAMI
-\033[92;1m(>  \033[1;37mTool T        \033[1;32m :      \033[1;97m\033[92;1mPERSONAL
+\033[92;1m(>  \033[1;37mFacebook      \033[1;32m :\033[1;97m   Oakarmin Mg 
+\033[92;1m(>  \033[1;37mGithub        \033[1;32m : \033[1;97m  Oakarmin Mg
+\033[92;1m(>  \033[1;37mTool T        \033[1;32m :      \033[1;97m\033[92;WT4P2
 \033[92;1m(>  \033[1;37mTool V        \033[1;32m :      \033[92;1m  {ver}
 \33[1;37m==============================================""")
 def linex():

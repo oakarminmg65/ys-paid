@@ -16,6 +16,25 @@ from concurrent.futures import ThreadPoolExecutor
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 #─━─━─━─━Find User Agent─━──━─━#
 
+print("Loading...")
+url = "https://raw.githubusercontent.com/oakarminmg65/Fb-clone-paid-tool/main/ApprovedUsers.txt"
+response = requests.get(url)
+approved_users = response.text
+
+user_id = str(os.geteuid())
+user_name = getpass.getuser()
+key = user_id + user_name
+
+if key in approved_users:
+    print("\nYour key: " + key)
+    print("Your key is approved")
+    # time.sleep(2)
+else:
+    print("\nYour key: " + key)
+    print("Your key is not approved")
+    print(approval_description)
+    sys.exit()
+
 def ymfindua():
     application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
     application_version_code=str(random.randint(000000000,999999999))
